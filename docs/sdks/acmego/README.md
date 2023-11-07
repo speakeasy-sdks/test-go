@@ -26,15 +26,15 @@ package main
 import(
 	"context"
 	"log"
-	testgo "github.com/speakeasy-sdks/test-go"
-	"github.com/speakeasy-sdks/test-go/pkg/models/shared"
+	testgo "github.com/speakeasy-sdks/test-go/v2"
+	"github.com/speakeasy-sdks/test-go/v2/pkg/models/shared"
 )
 
 func main() {
     s := testgo.New()
 
     ctx := context.Background()
-    res, err := s.AcmeGo.CreateUserv1(ctx, shared.UserInput{
+    res, err := s.CreateUserv1(ctx, shared.UserInput{
         Country: "Benin",
         Email: "Della67@yahoo.com",
         Firstname: "Enrique",
@@ -77,15 +77,15 @@ package main
 import(
 	"context"
 	"log"
-	testgo "github.com/speakeasy-sdks/test-go"
-	"github.com/speakeasy-sdks/test-go/pkg/models/operations"
+	testgo "github.com/speakeasy-sdks/test-go/v2"
+	"github.com/speakeasy-sdks/test-go/v2/pkg/models/operations"
 )
 
 func main() {
     s := testgo.New()
 
     ctx := context.Background()
-    res, err := s.AcmeGo.DeleteUserv1(ctx, operations.DeleteUserv1Request{
+    res, err := s.DeleteUserv1(ctx, operations.DeleteUserv1Request{
         ID: "<ID>",
     })
     if err != nil {
@@ -123,14 +123,14 @@ package main
 import(
 	"context"
 	"log"
-	testgo "github.com/speakeasy-sdks/test-go"
+	testgo "github.com/speakeasy-sdks/test-go/v2"
 )
 
 func main() {
     s := testgo.New()
 
     ctx := context.Background()
-    res, err := s.AcmeGo.GetHealth(ctx)
+    res, err := s.GetHealth(ctx)
     if err != nil {
         log.Fatal(err)
     }
@@ -165,15 +165,15 @@ package main
 import(
 	"context"
 	"log"
-	testgo "github.com/speakeasy-sdks/test-go"
-	"github.com/speakeasy-sdks/test-go/pkg/models/operations"
+	testgo "github.com/speakeasy-sdks/test-go/v2"
+	"github.com/speakeasy-sdks/test-go/v2/pkg/models/operations"
 )
 
 func main() {
     s := testgo.New()
 
     ctx := context.Background()
-    res, err := s.AcmeGo.GetUserv1(ctx, operations.GetUserv1Request{
+    res, err := s.GetUserv1(ctx, operations.GetUserv1Request{
         ID: "<ID>",
     })
     if err != nil {
@@ -211,15 +211,15 @@ package main
 import(
 	"context"
 	"log"
-	testgo "github.com/speakeasy-sdks/test-go"
-	"github.com/speakeasy-sdks/test-go/pkg/models/shared"
+	testgo "github.com/speakeasy-sdks/test-go/v2"
+	"github.com/speakeasy-sdks/test-go/v2/pkg/models/shared"
 )
 
 func main() {
     s := testgo.New()
 
     ctx := context.Background()
-    res, err := s.AcmeGo.SearchUsersv1(ctx, shared.Filters{
+    res, err := s.SearchUsersv1(ctx, shared.Filters{
         Filters: []shared.Filter{
             shared.Filter{
                 Field: "string",
@@ -263,17 +263,17 @@ package main
 import(
 	"context"
 	"log"
-	testgo "github.com/speakeasy-sdks/test-go"
-	"github.com/speakeasy-sdks/test-go/pkg/models/operations"
-	"github.com/speakeasy-sdks/test-go/pkg/models/shared"
+	testgo "github.com/speakeasy-sdks/test-go/v2"
+	"github.com/speakeasy-sdks/test-go/v2/pkg/models/operations"
+	"github.com/speakeasy-sdks/test-go/v2/pkg/models/shared"
 )
 
 func main() {
     s := testgo.New()
 
     ctx := context.Background()
-    res, err := s.AcmeGo.UpdateUserv1(ctx, operations.UpdateUserv1Request{
-        UserInput: shared.UserInput{
+    res, err := s.UpdateUserv1(ctx, operations.UpdateUserv1Request{
+        User: shared.UserInput{
             Country: "Reunion",
             Email: "Anjali_Mann@gmail.com",
             Firstname: "Miracle",
