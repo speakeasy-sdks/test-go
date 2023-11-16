@@ -24,10 +24,10 @@ Create user
 package main
 
 import(
-	"context"
-	"log"
 	testgo "github.com/speakeasy-sdks/test-go/v2"
+	"context"
 	"github.com/speakeasy-sdks/test-go/v2/pkg/models/shared"
+	"log"
 )
 
 func main() {
@@ -77,10 +77,10 @@ Delete a user by ID
 package main
 
 import(
-	"context"
-	"log"
 	testgo "github.com/speakeasy-sdks/test-go/v2"
+	"context"
 	"github.com/speakeasy-sdks/test-go/v2/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -125,9 +125,10 @@ Healthcheck
 package main
 
 import(
+	testgo "github.com/speakeasy-sdks/test-go/v2"
 	"context"
 	"log"
-	testgo "github.com/speakeasy-sdks/test-go/v2"
+	"net/http"
 )
 
 func main() {
@@ -169,10 +170,10 @@ Get a user by ID
 package main
 
 import(
-	"context"
-	"log"
 	testgo "github.com/speakeasy-sdks/test-go/v2"
+	"context"
 	"github.com/speakeasy-sdks/test-go/v2/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -217,10 +218,10 @@ Search users
 package main
 
 import(
-	"context"
-	"log"
 	testgo "github.com/speakeasy-sdks/test-go/v2"
+	"context"
 	"github.com/speakeasy-sdks/test-go/v2/pkg/models/shared"
+	"log"
 )
 
 func main() {
@@ -271,11 +272,11 @@ func main() {
 package main
 
 import(
-	"context"
-	"log"
 	testgo "github.com/speakeasy-sdks/test-go/v2"
-	"github.com/speakeasy-sdks/test-go/v2/pkg/models/operations"
+	"context"
 	"github.com/speakeasy-sdks/test-go/v2/pkg/models/shared"
+	"github.com/speakeasy-sdks/test-go/v2/pkg/models/operations"
+	"log"
 )
 
 func main() {
