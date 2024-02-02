@@ -1,4 +1,4 @@
-module github.com/speakeasy-sdks/test-go/v2
+module github.com/speakeasy-sdks/test-go/v3
 
 go 1.20
 

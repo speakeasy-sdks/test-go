@@ -4,9 +4,9 @@ management:
   docChecksum: b3cde103f3a8cd2dc7100b66267790bb
   docVersion: 0.1.0
   speakeasyVersion: internal
-  generationVersion: 2.237.2
-  releaseVersion: 2.3.1
-  configChecksum: 24d01147638d32269bfad01f9142f3ea
+  generationVersion: 2.248.1
+  releaseVersion: 3.0.0
+  configChecksum: 7852f1944a4dbb80fdf269cc5926a8cb
   repoURL: https://github.com/speakeasy-sdks/test-go.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/test-go

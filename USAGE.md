@@ -4,8 +4,8 @@ package main
 
 import (
 	"context"
-	testgo "github.com/speakeasy-sdks/test-go/v2"
-	"github.com/speakeasy-sdks/test-go/v2/pkg/models/shared"
+	testgo "github.com/speakeasy-sdks/test-go/v3"
+	"github.com/speakeasy-sdks/test-go/v3/pkg/models/shared"
 	"log"
 )
 
