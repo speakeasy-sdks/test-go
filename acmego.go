@@ -123,9 +123,9 @@ func New(opts ...SDKOption) *AcmeGo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "0.1.0",
-			SDKVersion:        "3.1.0",
-			GenVersion:        "2.258.2",
-			UserAgent:         "speakeasy-sdk/go 3.1.0 2.258.2 0.1.0 github.com/speakeasy-sdks/test-go",
+			SDKVersion:        "3.1.1",
+			GenVersion:        "2.263.3",
+			UserAgent:         "speakeasy-sdk/go 3.1.1 2.263.3 0.1.0 github.com/speakeasy-sdks/test-go",
 			Hooks:             hooks.New(),
 		},
 	}
@@ -169,12 +169,12 @@ func (s *AcmeGo) CreateUserv1(ctx context.Context, request shared.UserInput) (*o
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -197,7 +197,6 @@ func (s *AcmeGo) CreateUserv1(ctx context.Context, request shared.UserInput) (*o
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.CreateUserv1Response{
@@ -264,12 +263,12 @@ func (s *AcmeGo) DeleteUserv1(ctx context.Context, request operations.DeleteUser
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -292,7 +291,6 @@ func (s *AcmeGo) DeleteUserv1(ctx context.Context, request operations.DeleteUser
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.DeleteUserv1Response{
@@ -359,12 +357,12 @@ func (s *AcmeGo) GetHealth(ctx context.Context) (*operations.GetHealthResponse, 
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -387,7 +385,6 @@ func (s *AcmeGo) GetHealth(ctx context.Context) (*operations.GetHealthResponse, 
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetHealthResponse{
@@ -443,12 +440,12 @@ func (s *AcmeGo) GetUserv1(ctx context.Context, request operations.GetUserv1Requ
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -471,7 +468,6 @@ func (s *AcmeGo) GetUserv1(ctx context.Context, request operations.GetUserv1Requ
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetUserv1Response{
@@ -544,12 +540,12 @@ func (s *AcmeGo) SearchUsersv1(ctx context.Context, request shared.Filters) (*op
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -572,7 +568,6 @@ func (s *AcmeGo) SearchUsersv1(ctx context.Context, request shared.Filters) (*op
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.SearchUsersv1Response{
@@ -632,12 +627,12 @@ func (s *AcmeGo) UpdateUserv1(ctx context.Context, request operations.UpdateUser
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -660,7 +655,6 @@ func (s *AcmeGo) UpdateUserv1(ctx context.Context, request operations.UpdateUser
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.UpdateUserv1Response{
