@@ -3,19 +3,20 @@ id: 78ea10ed-ebd8-41d3-aedd-6178e2111a55
 management:
   docChecksum: b3cde103f3a8cd2dc7100b66267790bb
   docVersion: 0.1.0
-  speakeasyVersion: internal
-  generationVersion: 2.272.4
-  releaseVersion: 3.1.2
-  configChecksum: 3e63026e58ab8ddc25d5e27db2feef28
+  speakeasyVersion: 1.204.1
+  generationVersion: 2.279.1
+  releaseVersion: 3.2.0
+  configChecksum: ac2b1540da50b08caed4ab4cc2322293
   repoURL: https://github.com/speakeasy-sdks/test-go.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/test-go
   published: true
 features:
   go:
-    core: 3.4.3
+    core: 3.4.4
     globalServerURLs: 2.82.1
     inputOutputModels: 2.83.0
+    responseFormat: 0.1.0
 generatedFiles:
   - acmego.go
   - go.mod
